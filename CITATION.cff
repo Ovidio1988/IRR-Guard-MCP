@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use or discuss this software, please cite it as below."
+title: "IRR Guard MCP"
+type: software
+authors:
+  - family-names: "Ibáñez Sánchez"
+    given-names: "Carlos"
+version: 0.1.0
+date-released: 2026-09-18
+license: MIT
+abstract: "Research prototype implementing the Informe de Ratificación Razonada (IRR) as an auditable MCP-style supervisory layer for judicial AI assistance, with a web wizard for demonstration."
+keywords:
+  - judicial AI
+  - human oversight
+  - traceability
+  - MCP
+  - IRR
+  - KENDOJ
+  - Delfos

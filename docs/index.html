@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IRR Guard · MCP</title>
+<style>
+body{margin:0;background:#07101e;color:#edf2f7;font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}.wrap{max-width:980px;margin:auto;padding:56px 24px}.tag{display:inline-block;border:1px solid #334155;border-radius:999px;padding:6px 10px;color:#cbd5e1;font-size:13px}h1{font-size:54px;line-height:1;margin:20px 0 16px}.accent{color:#6ee7b7}.lead{font-size:21px;color:#b6c2d3;max-width:780px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}.btn{display:inline-block;text-decoration:none;color:white;background:#2563eb;padding:12px 16px;border-radius:10px;font-weight:700}.btn.alt{background:#13213a;border:1px solid #334155}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:36px 0}.card{border:1px solid #26354f;background:#0d1728;border-radius:14px;padding:18px}.card h3{margin-top:0}.muted{color:#94a3b8}.shot{width:100%;border-radius:16px;border:1px solid #26354f;box-shadow:0 20px 55px #0008}.note{border-left:3px solid #fbbf24;padding:12px 15px;background:#101928;color:#cbd5e1;margin-top:30px}@media(max-width:760px){h1{font-size:40px}.grid{grid-template-columns:1fr}}
+</style></head><body><main class="wrap">
+<span class="tag">Research prototype · v0.1.0</span>
+<h1>IRR <span class="accent">Guard</span></h1>
+<p class="lead">Una capa MCP de supervisión humana trazable basada en el Informe de Ratificación Razonada (IRR), diseñada como prototipo para flujos de asistencia judicial tipo KENDOJ o Delfos.</p>
+<div class="actions"><a class="btn" id="download" href="#">Descargar código</a><a class="btn alt" id="repo" href="#">Ver repositorio</a><a class="btn alt" id="talk" href="#">Guion de demo</a></div>
+<div class="grid"><section class="card"><h3>Incidencia material</h3><p class="muted">La intensidad de trazabilidad aumenta cuando el uso de IA incide materialmente en el razonamiento, no por el mero hecho de usar IA.</p></section><section class="card"><h3>Verificación por capas</h3><p class="muted">Distingue sintaxis, existencia, correspondencia, fidelidad de la proposición, vigencia, ratio/obiter y contraste con el expediente.</p></section><section class="card"><h3>Ratificación humana</h3><p class="muted">Permite cerrar el IRR solo cuando se han resuelto incidencias objetivas y existe una ratificación humana explícita.</p></section></div>
+<img class="shot" src="wizard_preview.png" alt="Captura del wizard IRR Guard">
+<div class="note"><strong>Demo académica.</strong> No está conectada a sistemas judiciales oficiales y no debe utilizarse con expedientes o datos reales sin validación institucional de seguridad, privacidad, interoperabilidad y gobernanza.</div>
+</main><script>
+(function(){
+ const host=location.hostname;
+ const parts=location.pathname.split('/').filter(Boolean);
+ if(host.endsWith('.github.io') && parts.length){
+   const owner=host.split('.')[0], repo=parts[0];
+   const base=`https://github.com/${owner}/${repo}`;
+   document.getElementById('repo').href=base;
+   document.getElementById('download').href=`${base}/archive/refs/heads/main.zip`;
+   document.getElementById('talk').href=`${base}/blob/main/TALK_SCRIPT.md`;
+ } else {
+   ['repo','download','talk'].forEach(id=>document.getElementById(id).style.display='none');
+ }
+})();
+</script></body></html>
